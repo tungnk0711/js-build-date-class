@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myDate(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+
+            this.getDay = function () {
+                return this.day;
+            }
+            this.getMonth = function () {
+                return this.month;
+            }
+            this.getYear = function () {
+                return this.year;
+            }
+
+            this.setDay = function (day) {
+                this.day = day;
+            }
+
+            this.setMonth = function (month) {
+                this.month = month;
+            }
+
+            this.setYear = function (year) {
+                this.year = year;
+            }
+
+            this.setDate = function (day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+
+            this.toString = function () {
+                return this.day + '/' + this.month + '/' + this.year;
+            }
+        }
+
+        var d = new myDate(2, 3, 2018);
+
+        var day = d.getDay();
+        var month = d.getMonth();
+        var year = d.getYear();
+
+        console.log(day + '-' + month + '-' + year);
+
+
+        d.setDay(7);
+        d.setMonth(8);
+        d.setYear(2020);
+
+        var day1 = d.getDay();
+        var month1 = d.getMonth();
+        var year1 = d.getYear();
+
+        console.log(day1 + '-' + month1 + '-' + year1);
+
+        d.setDate(6, 9, 2000);
+
+        var day2 = d.getDay();
+        var month2 = d.getMonth();
+        var year2 = d.getYear();
+
+        console.log(d.toString());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
